@@ -25,4 +25,4 @@ jobs:
             git pull origin main
             pnpm install --frozen-lockfile
             pnpm run build
-            pm2 restart all
+            /root/.local/share/pnpm/pm2 restart all
