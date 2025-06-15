@@ -1,10 +1,11 @@
-version: '3'
+version: '3.9'
+
 services:
   app:
-    image: node:18
-    working_dir: /app
-    volumes:
-      - .:/app
-    command: pnpm start
+    build: .
+    container_name: vercel-apps
+    restart: always
     ports:
       - "3003:3003"
+    environment:
+      - NODE_ENV=production
