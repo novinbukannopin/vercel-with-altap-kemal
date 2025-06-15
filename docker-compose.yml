@@ -1,0 +1,10 @@
+version: '3'
+services:
+  app:
+    image: node:18
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: pnpm start
+    ports:
+      - "3003:3003"
